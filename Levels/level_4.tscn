@@ -17,7 +17,7 @@
 [ext_resource type="Script" path="res://Levels/Gold.gd" id="15_g0cog"]
 [ext_resource type="Script" path="res://Levels/Ice.gd" id="16_hqavn"]
 [ext_resource type="PackedScene" uid="uid://ddcvthuknd61h" path="res://PowerUp/jump_higher.tscn" id="17_n3api"]
-[ext_resource type="PackedScene" path="res://PowerUp/extra_hp.tscn" id="18_2gduf"]
+[ext_resource type="PackedScene" uid="uid://cmdm6j5rw6ylq" path="res://PowerUp/extra_hp.tscn" id="18_2gduf"]
 [ext_resource type="PackedScene" uid="uid://2rhe0sab4jjb" path="res://PowerUp/speed_power_up.tscn" id="19_vfxer"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jyktw"]
@@ -888,10 +888,10 @@ shape = SubResource("RectangleShape2D_ug3dx")
 one_way_collision = true
 
 [node name="Player" parent="." instance=ExtResource("12_r3h82")]
-position = Vector2(2591, 1343)
+position = Vector2(2556, 1356)
 
 [node name="Frost_Golem" parent="." instance=ExtResource("13_0wv2m")]
-position = Vector2(3059, 880)
+position = Vector2(3100, 852)
 
 [node name="GUI" type="CanvasLayer" parent="."]
 

@@ -13,7 +13,6 @@ func _process(delta):
 "
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_peqn7"]
-load_path = "res://.godot/imported/BG rota.png-3f2970af79aae29073f0da8723143f73.ctex"
 
 [node name="BG" type="ParallaxBackground"]
 scroll_offset = Vector2(1, 1)

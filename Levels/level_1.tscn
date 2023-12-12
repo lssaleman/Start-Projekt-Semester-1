@@ -1600,7 +1600,6 @@ texture = ExtResource("19_qmqy6")
 13:1/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7otvi"]
-load_path = "res://.godot/imported/FOOD.png-9852a49924e80e5f72bc74ee6fd57d03.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_phjwp"]
 texture = SubResource("CompressedTexture2D_7otvi")

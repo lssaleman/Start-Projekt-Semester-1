@@ -113,7 +113,7 @@
 [ext_resource type="PackedScene" uid="uid://ddcvthuknd61h" path="res://PowerUp/jump_higher.tscn" id="107_wuxie"]
 [ext_resource type="Texture2D" uid="uid://dxxoqdx3xdvwl" path="res://World/tileset/Tiles/portal4_spritesheet.png" id="109_juh8m"]
 [ext_resource type="Texture2D" uid="uid://dndaqmakrya7" path="res://World/tileset/Object/sled.png" id="111_xugm5"]
-[ext_resource type="PackedScene" path="res://Interaction/Movingkey.tscn" id="112_qqw7w"]
+[ext_resource type="PackedScene" uid="uid://bl081vsdfo7q2" path="res://Interaction/Movingkey.tscn" id="112_qqw7w"]
 [ext_resource type="Script" path="res://Levels/level_3_end.gd" id="113_dw0tl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ex0a"]

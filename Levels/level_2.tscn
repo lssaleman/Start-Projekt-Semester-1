@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=3 uid="uid://dovsj14gree56"]
+[gd_scene load_steps=91 format=3 uid="uid://dovsj14gree56"]
 
 [ext_resource type="Script" path="res://Levels/level_2.gd" id="1_da1wn"]
 [ext_resource type="PackedScene" uid="uid://byj7binlurve2" path="res://player.tscn" id="1_t28x7"]
@@ -29,8 +29,11 @@
 [ext_resource type="Script" path="res://Levels/Key.gd" id="26_l6fne"]
 [ext_resource type="PackedScene" uid="uid://c1mwhk1qjbl10" path="res://Interaction/interact_area.tscn" id="26_v6cb1"]
 [ext_resource type="PackedScene" uid="uid://j07cywye7ljp" path="res://Interaction/hell_area.tscn" id="27_1yjt3"]
-[ext_resource type="PackedScene" path="res://Interaction/Movingkey.tscn" id="28_xikw2"]
+[ext_resource type="PackedScene" uid="uid://bl081vsdfo7q2" path="res://Interaction/Movingkey.tscn" id="28_xikw2"]
 [ext_resource type="Script" path="res://Levels/level_2_end.gd" id="29_ufaxk"]
+[ext_resource type="PackedScene" uid="uid://dk7k588ly30sl" path="res://Monsters/northern.tscn" id="32_cf8t2"]
+[ext_resource type="PackedScene" uid="uid://1x806506ytot" path="res://Monsters/snowy.tscn" id="33_k7dt8"]
+[ext_resource type="PackedScene" uid="uid://bc4ew0hs21qgc" path="res://Monsters/spiked_slime.tscn" id="34_uhog2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b7s6l"]
 radius = 16.0
@@ -4867,6 +4870,15 @@ position = Vector2(3831, 1370)
 
 [node name="Movingkey" parent="." instance=ExtResource("28_xikw2")]
 position = Vector2(4999, 1280)
+
+[node name="Northern" parent="." instance=ExtResource("32_cf8t2")]
+position = Vector2(445, 573)
+
+[node name="snowy" parent="." instance=ExtResource("33_k7dt8")]
+position = Vector2(551, 576)
+
+[node name="Spiked Slime" parent="." instance=ExtResource("34_uhog2")]
+position = Vector2(243, 579)
 
 [connection signal="body_entered" from="level_2_end" to="level_2_end" method="_on_body_entered"]
 [connection signal="area_entered" from="Player/Player/Area2D" to="Player/Player" method="_on_area_2d_area_entered"]
