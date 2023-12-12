@@ -1,0 +1,237 @@
+[gd_scene load_steps=31 format=3 uid="uid://w187mrie5wt6"]
+
+[ext_resource type="Script" path="res://Monsters/Frost_Golem.gd" id="1_15kvb"]
+[ext_resource type="Texture2D" uid="uid://p5nmv83fwq10" path="res://Monsters/Animation/3 Frost_golem/Frost_golem_attack.png" id="2_cy8xl"]
+[ext_resource type="Texture2D" uid="uid://4qscvi6icri7" path="res://Monsters/Animation/3 Frost_golem/Frost_golem_death.png" id="3_lsuod"]
+[ext_resource type="Texture2D" uid="uid://blatn1rkf36oh" path="res://Monsters/Animation/3 Frost_golem/Frost_golem_idle.png" id="4_on1p2"]
+[ext_resource type="Texture2D" uid="uid://dmcdfgylrkkb7" path="res://Monsters/Animation/3 Frost_golem/Frost_golem_hurt.png" id="4_wuipl"]
+[ext_resource type="Texture2D" uid="uid://bxfmu3yas680n" path="res://Monsters/Animation/3 Frost_golem/Frost_golem_walk.png" id="5_3xapa"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q351h"]
+radius = 19.0
+height = 74.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_puvfy"]
+atlas = ExtResource("2_cy8xl")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgajl"]
+atlas = ExtResource("2_cy8xl")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elrd6"]
+atlas = ExtResource("2_cy8xl")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_as1ic"]
+atlas = ExtResource("2_cy8xl")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arbw2"]
+atlas = ExtResource("3_lsuod")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_polhb"]
+atlas = ExtResource("3_lsuod")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_alm1y"]
+atlas = ExtResource("3_lsuod")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4bdl"]
+atlas = ExtResource("3_lsuod")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38ll5"]
+atlas = ExtResource("4_wuipl")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnquk"]
+atlas = ExtResource("4_wuipl")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nycoy"]
+atlas = ExtResource("4_on1p2")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mrqn"]
+atlas = ExtResource("4_on1p2")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00i02"]
+atlas = ExtResource("4_on1p2")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmkq8"]
+atlas = ExtResource("4_on1p2")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcknc"]
+atlas = ExtResource("5_3xapa")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ac83r"]
+atlas = ExtResource("5_3xapa")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ix0ej"]
+atlas = ExtResource("5_3xapa")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmx5m"]
+atlas = ExtResource("5_3xapa")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fog85"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_puvfy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgajl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elrd6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_as1ic")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arbw2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_polhb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_alm1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4bdl")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38ll5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnquk")
+}],
+"loop": true,
+"name": &"Hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nycoy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3mrqn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00i02")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmkq8")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pcknc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ac83r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ix0ej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rmx5m")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ijyha"]
+radius = 1311.77
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yb785"]
+size = Vector2(247.75, 99.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nwhbs"]
+size = Vector2(53, 18.375)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8taco"]
+radius = 21.0
+height = 68.0
+
+[node name="Frost_Golem" type="CharacterBody2D"]
+script = ExtResource("1_15kvb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-11, -49)
+shape = SubResource("CapsuleShape2D_q351h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-21, -77)
+scale = Vector2(3.04167, 2.83333)
+sprite_frames = SubResource("SpriteFrames_fog85")
+animation = &"Death"
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+position = Vector2(-2, -2)
+shape = SubResource("CircleShape2D_ijyha")
+
+[node name="Frost_GolemAttack" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frost_GolemAttack"]
+position = Vector2(-1.875, -56.75)
+shape = SubResource("RectangleShape2D_yb785")
+
+[node name="Frost_GolemDeath" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frost_GolemDeath"]
+position = Vector2(3, -92)
+shape = SubResource("RectangleShape2D_nwhbs")
+
+[node name="PlayerCollision" type="Area2D" parent="."]
+position = Vector2(-1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCollision"]
+position = Vector2(-10, -51)
+shape = SubResource("CapsuleShape2D_8taco")
+
+[node name="healthBar" type="ProgressBar" parent="."]
+modulate = Color(0.811765, 0.168627, 0.364706, 1)
+offset_left = -26.0
+offset_top = -121.0
+offset_right = 584.0
+offset_bottom = 39.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 60
+max_value = 10.0
+step = 1.0
+value = 10.0
+
+[connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
+[connection signal="body_entered" from="Frost_GolemAttack" to="." method="_on_frost_golem_attack_body_entered"]
+[connection signal="body_exited" from="Frost_GolemAttack" to="." method="_on_frost_golem_attack_body_exited"]
+[connection signal="body_entered" from="Frost_GolemDeath" to="." method="_on_frost_golem_death_body_entered"]
+[connection signal="body_entered" from="PlayerCollision" to="." method="_on_player_collision_body_entered"]

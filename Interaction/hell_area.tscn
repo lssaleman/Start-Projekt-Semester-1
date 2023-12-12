@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://j07cywye7ljp"]
+
+[ext_resource type="Script" path="res://Interaction/HellArea.gd" id="1_cq1os"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0eulp"]
+
+[node name="HellArea" type="Area2D" groups=["Poison"]]
+script = ExtResource("1_cq1os")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(4.01, 2.875)
+shape = SubResource("RectangleShape2D_0eulp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

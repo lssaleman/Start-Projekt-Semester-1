@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp16s8rx3j01e"]
+
+[ext_resource type="Texture2D" uid="uid://d315do21c7qt3" path="res://World/sci_fi_bg1.jpg" id="1_u8p3h"]
+
+[sub_resource type="GDScript" id="GDScript_645sc"]
+script/source = "extends ParallaxBackground
+
+
+var scrolling_speed = 100
+
+func _process(delta):
+	scroll_offset.x -= scrolling_speed * delta
+"
+
+[node name="BG" type="ParallaxBackground"]
+scroll_offset = Vector2(1, 1)
+script = SubResource("GDScript_645sc")
+
+[node name="Bg" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(3392, 0)
+
+[node name="Bg 1" type="Sprite2D" parent="Bg"]
+position = Vector2(1076.37, 1351)
+scale = Vector2(1.79232, 2.51296)
+texture = ExtResource("1_u8p3h")
+
+[node name="BgRota" type="Sprite2D" parent="Bg"]
+position = Vector2(7984, 1350)
+scale = Vector2(1.88444, 2.51111)
+texture = ExtResource("1_u8p3h")

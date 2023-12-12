@@ -1,0 +1,896 @@
+[gd_scene load_steps=49 format=3 uid="uid://488qwtpar5to"]
+
+[ext_resource type="Script" path="res://Tutorial/tutorial_sprites.gd" id="1_mwu65"]
+[ext_resource type="Texture2D" uid="uid://mbp4er1h7q7t" path="res://KeySprites/SimpleKeys/SimpleKeys/Classic/Light/Spritesheets/SPACE.png" id="2_huvln"]
+[ext_resource type="Texture2D" uid="uid://tyg7p65rfxxm" path="res://KeySprites/SimpleKeys/SimpleKeys/Classic/Light/Spritesheets/E.png" id="3_5jyso"]
+[ext_resource type="Texture2D" uid="uid://gs682qslpg21" path="res://KeySprites/SimpleKeys/SimpleKeys/Classic/Light/Spritesheets/ARROWDOWN.png" id="3_qetjl"]
+[ext_resource type="Texture2D" uid="uid://vsvux2kvw8wl" path="res://KeySprites/SimpleKeys/SimpleKeys/Classic/Light/Spritesheets/ARROWLEFT.png" id="3_wbt1f"]
+[ext_resource type="Texture2D" uid="uid://bpe67fmomixlc" path="res://KeySprites/SimpleKeys/SimpleKeys/Classic/Light/Spritesheets/ARROWRIGHT.png" id="4_eiwi1"]
+[ext_resource type="Texture2D" uid="uid://ch1tbyn3lahre" path="res://KeySprites/SimpleKeys/SimpleKeys/Classic/Light/Spritesheets/R.png" id="5_hipoh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2yix"]
+atlas = ExtResource("2_huvln")
+region = Rect2(0, 0, 67, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cw2ct"]
+atlas = ExtResource("2_huvln")
+region = Rect2(67, 0, 67, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vld41"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2yix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cw2ct")
+}],
+"loop": true,
+"name": &"Spacebar",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_x0ia8"]
+resource_name = "DownArrow"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../DownArrow:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"DownArrow"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../DownArrow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_c0xss"]
+resource_name = "E"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../E:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"E"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../E:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_7w767"]
+resource_name = "LeftArrow"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../LeftArrow:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../LeftArrow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_152lc"]
+resource_name = "R"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../R:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"R"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_tlrv0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../LeftArrow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../RightArrow:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../E:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../R:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../DownArrow:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_rqjay"]
+resource_name = "RightArrow"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../RightArrow:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"RightArrow"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../RightArrow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_c1xgy"]
+resource_name = "Spacebar"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Spacebar"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pl1x4"]
+_data = {
+"DownArrow": SubResource("Animation_x0ia8"),
+"E": SubResource("Animation_c0xss"),
+"LeftArrow": SubResource("Animation_7w767"),
+"R": SubResource("Animation_152lc"),
+"RESET": SubResource("Animation_tlrv0"),
+"RightArrow": SubResource("Animation_rqjay"),
+"Spacebar": SubResource("Animation_c1xgy")
+}
+
+[sub_resource type="Animation" id="Animation_iexw5"]
+resource_name = "E"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../E:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"E"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../E:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_camkm"]
+resource_name = "LeftArrow"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../LeftArrow:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"LeftArrow"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../LeftArrow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_6i8qa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../E:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../LeftArrow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mdmv0"]
+_data = {
+"E": SubResource("Animation_iexw5"),
+"LeftArrow": SubResource("Animation_camkm"),
+"RESET": SubResource("Animation_6i8qa")
+}
+
+[sub_resource type="Animation" id="Animation_rthgy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_bayfk"]
+resource_name = "RightArrow"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"RightArrow"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rwbat"]
+_data = {
+"RESET": SubResource("Animation_rthgy"),
+"RightArrow": SubResource("Animation_bayfk")
+}
+
+[sub_resource type="Animation" id="Animation_3me6j"]
+resource_name = "R"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"R"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_cvod2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1ih6v"]
+_data = {
+"R": SubResource("Animation_3me6j"),
+"RESET": SubResource("Animation_cvod2")
+}
+
+[sub_resource type="Animation" id="Animation_bk6df"]
+resource_name = "DownArrow"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"DownArrow"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_tqlkx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_prx7p"]
+_data = {
+"DownArrow": SubResource("Animation_bk6df"),
+"RESET": SubResource("Animation_tqlkx")
+}
+
+[sub_resource type="Animation" id="Animation_47b4r"]
+resource_name = "DownArrow"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"DownArrow"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_aendy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mkhml"]
+_data = {
+"DownArrow": SubResource("Animation_47b4r"),
+"RESET": SubResource("Animation_aendy")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxs54"]
+atlas = ExtResource("3_qetjl")
+region = Rect2(0, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywdak"]
+atlas = ExtResource("3_qetjl")
+region = Rect2(17, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bo8o0"]
+atlas = ExtResource("3_5jyso")
+region = Rect2(0, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x0ujl"]
+atlas = ExtResource("3_5jyso")
+region = Rect2(17, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4iuh"]
+atlas = ExtResource("3_wbt1f")
+region = Rect2(0, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yr21w"]
+atlas = ExtResource("3_wbt1f")
+region = Rect2(17, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlrht"]
+atlas = ExtResource("5_hipoh")
+region = Rect2(0, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lrvg"]
+atlas = ExtResource("5_hipoh")
+region = Rect2(17, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p30tt"]
+atlas = ExtResource("4_eiwi1")
+region = Rect2(0, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlyor"]
+atlas = ExtResource("4_eiwi1")
+region = Rect2(17, 0, 17, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5y0uj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rxs54")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywdak")
+}],
+"loop": true,
+"name": &"DownArrow",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bo8o0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x0ujl")
+}],
+"loop": true,
+"name": &"E",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s4iuh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yr21w")
+}],
+"loop": true,
+"name": &"LeftArrow",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlrht")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lrvg")
+}],
+"loop": true,
+"name": &"R",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p30tt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mlyor")
+}],
+"loop": true,
+"name": &"RightArrow",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_tx0xe"]
+resource_name = "E"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("E:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"E"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("E:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_s7y37"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("E:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0spx4"]
+_data = {
+"E": SubResource("Animation_tx0xe"),
+"RESET": SubResource("Animation_s7y37")
+}
+
+[node name="Tutorial Sprites" type="Node2D"]
+script = ExtResource("1_mwu65")
+
+[node name="Spacebar Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(320, 104)
+sprite_frames = SubResource("SpriteFrames_vld41")
+animation = &"Spacebar"
+frame = 1
+
+[node name="Label" type="Label" parent="Spacebar Sprite"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -45.5
+offset_top = -30.0
+offset_right = 69.5
+offset_bottom = -4.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Press Space to Jump"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Spacebar Sprite"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.5
+offset_top = -40.0
+offset_right = 118.5
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+text = "Press Spacebar to Jump"
+fit_content = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Spacebar Sprite")
+libraries = {
+"": SubResource("AnimationLibrary_pl1x4")
+}
+
+[node name="LeftArrowAni" type="AnimationPlayer" parent="."]
+root_node = NodePath(".")
+libraries = {
+"": SubResource("AnimationLibrary_mdmv0")
+}
+
+[node name="RightArrowAni" type="AnimationPlayer" parent="."]
+root_node = NodePath("../RightArrow")
+libraries = {
+"": SubResource("AnimationLibrary_rwbat")
+}
+
+[node name="RAni" type="AnimationPlayer" parent="."]
+root_node = NodePath("../R")
+autoplay = "R"
+libraries = {
+"": SubResource("AnimationLibrary_1ih6v")
+}
+
+[node name="DownArrowAni" type="AnimationPlayer" parent="."]
+root_node = NodePath("../DownArrow")
+libraries = {
+"": SubResource("AnimationLibrary_prx7p")
+}
+
+[node name="AnimationPlayer7" type="AnimationPlayer" parent="."]
+root_node = NodePath("../DownArrow")
+libraries = {
+"": SubResource("AnimationLibrary_mkhml")
+}
+
+[node name="LeftArrow" type="AnimatedSprite2D" parent="."]
+position = Vector2(216, 104)
+sprite_frames = SubResource("SpriteFrames_5y0uj")
+animation = &"LeftArrow"
+frame = 1
+
+[node name="Label2" type="Label" parent="LeftArrow"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -56.0
+offset_top = -30.0
+offset_right = 152.0
+offset_bottom = -4.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Press Left Arrow to move left"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RightArrow" type="AnimatedSprite2D" parent="."]
+position = Vector2(432, 104)
+sprite_frames = SubResource("SpriteFrames_5y0uj")
+animation = &"RightArrow"
+frame = 1
+metadata/_edit_group_ = true
+
+[node name="Label2" type="Label" parent="RightArrow"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -61.815
+offset_top = -30.0
+offset_right = 167.185
+offset_bottom = -4.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Press Right Arrow to move right"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="E" type="AnimatedSprite2D" parent="."]
+position = Vector2(386, 161)
+sprite_frames = SubResource("SpriteFrames_5y0uj")
+animation = &"E"
+metadata/_edit_group_ = true
+
+[node name="Label2" type="Label" parent="E"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -56.0
+offset_top = -30.0
+offset_right = 152.0
+offset_bottom = -4.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Press E to Collect"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="R" type="AnimatedSprite2D" parent="."]
+position = Vector2(272, 152)
+sprite_frames = SubResource("SpriteFrames_5y0uj")
+animation = &"R"
+frame = 1
+
+[node name="Label2" type="Label" parent="R"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -56.0
+offset_top = -30.0
+offset_right = 152.0
+offset_bottom = -4.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Press R to ..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DownArrow" type="AnimatedSprite2D" parent="."]
+position = Vector2(536, 160)
+sprite_frames = SubResource("SpriteFrames_5y0uj")
+animation = &"DownArrow"
+frame = 1
+
+[node name="Label2" type="Label" parent="DownArrow"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -99.0
+offset_top = -30.0
+offset_right = 280.0
+offset_bottom = -4.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Press Down Arrow to fall through some groundtiles"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EAni" type="AnimationPlayer" parent="."]
+autoplay = "E"
+libraries = {
+"": SubResource("AnimationLibrary_0spx4")
+}

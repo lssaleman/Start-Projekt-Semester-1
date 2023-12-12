@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmdm6j5rw6ylq"]
+
+[ext_resource type="Script" path="res://PowerUp/extra HP.gd" id="1_i7p6u"]
+[ext_resource type="Texture2D" uid="uid://gtgcqs38vghy" path="res://PowerUp/pixel-heart-2779422_1280.png" id="2_t6guy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_atsjx"]
+radius = 8.06226
+
+[node name="extra HP" type="Area2D" groups=["HP"]]
+script = ExtResource("1_i7p6u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.015, 0.015)
+texture = ExtResource("2_t6guy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_atsjx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

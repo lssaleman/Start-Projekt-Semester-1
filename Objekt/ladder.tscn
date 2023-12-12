@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgsnydxs8egcr"]
+
+[ext_resource type="Texture2D" uid="uid://c1ukbg5ob0wkh" path="res://World/tileset/Object/Tree_2.png" id="1_6chs0"]
+[ext_resource type="Script" path="res://Objekt/ladder.gd" id="1_qgbyu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k0w4d"]
+radius = 67.0
+height = 204.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bxop7"]
+size = Vector2(37, 86)
+
+[node name="Ladder" type="Area2D"]
+z_index = -1
+script = ExtResource("1_qgbyu")
+
+[node name="LadderTexture" type="Sprite2D" parent="."]
+texture = ExtResource("1_6chs0")
+
+[node name="LadderColl" type="CollisionShape2D" parent="."]
+position = Vector2(-7, -14)
+shape = SubResource("CapsuleShape2D_k0w4d")
+
+[node name="LadderColl2" type="CollisionShape2D" parent="."]
+position = Vector2(-9.5, 96)
+shape = SubResource("RectangleShape2D_bxop7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

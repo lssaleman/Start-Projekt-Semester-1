@@ -1,0 +1,103 @@
+[gd_scene load_steps=7 format=3 uid="uid://bs7hu0x0aroq2"]
+
+[ext_resource type="AudioStream" uid="uid://nml2mhmfgivl" path="res://Music/interface-124464.mp3" id="1_fjfcy"]
+[ext_resource type="Script" path="res://Menus/game_over.gd" id="1_t4mml"]
+[ext_resource type="PackedScene" uid="uid://b2ly111u3m1as" path="res://BG.tscn" id="2_py2y2"]
+
+[sub_resource type="SystemFont" id="SystemFont_v3b06"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_s3in2"]
+font = SubResource("SystemFont_v3b06")
+font_size = 100
+font_color = Color(0.0470588, 0.0117647, 0.00392157, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_st3co"]
+font = SubResource("SystemFont_v3b06")
+font_size = 100
+font_color = Color(1, 0.0823529, 0.470588, 1)
+
+[node name="Game Over" type="Control"]
+layout_mode = 3
+anchor_top = 0.002
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.296
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t4mml")
+
+[node name="GAME" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.113
+anchor_top = 0.042
+anchor_right = 0.883
+anchor_bottom = 0.719
+offset_left = -0.17601
+offset_top = -0.216002
+offset_right = -0.519958
+offset_bottom = -18.976
+text = "GAME "
+label_settings = SubResource("LabelSettings_s3in2")
+horizontal_alignment = 1
+
+[node name="OVER" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.113
+anchor_right = 0.853
+anchor_bottom = 1.0
+offset_left = -0.17601
+offset_top = 9.0
+offset_right = 0.471863
+offset_bottom = 5.82397
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "
+OVER"
+label_settings = SubResource("LabelSettings_st3co")
+horizontal_alignment = 1
+
+[node name="BG" parent="." instance=ExtResource("2_py2y2")]
+
+[node name="Buttons" type="Node" parent="."]
+
+[node name="Nochmal" type="Button" parent="Buttons"]
+anchors_preset = -1
+anchor_left = 0.092
+anchor_top = 0.54
+anchor_right = 0.365
+anchor_bottom = 0.764
+offset_left = 0.0159912
+offset_top = 0.0799866
+offset_right = 0.519989
+offset_bottom = -0.072052
+theme_override_font_sizes/font_size = 30
+text = "RESTART"
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="Buttons/Nochmal"]
+stream = ExtResource("1_fjfcy")
+
+[node name="Verlassen" type="Button" parent="Buttons"]
+anchors_preset = -1
+anchor_left = 0.647
+anchor_top = 0.54
+anchor_right = 0.911
+anchor_bottom = 0.761
+offset_left = -0.343994
+offset_top = 0.0799866
+offset_right = 0.527954
+offset_bottom = -0.128021
+theme_override_font_sizes/font_size = 30
+text = "EXIT"
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="Buttons/Verlassen"]
+stream = ExtResource("1_fjfcy")
+
+[node name="Gameover Sound" type="AudioStreamPlayer" parent="."]
+autoplay = true
+
+[connection signal="mouse_entered" from="Buttons/Nochmal" to="." method="_on_nochmal_mouse_entered"]
+[connection signal="pressed" from="Buttons/Nochmal" to="." method="_on_nochmal_pressed"]
+[connection signal="mouse_entered" from="Buttons/Verlassen" to="." method="_on_verlassen_mouse_entered"]
+[connection signal="pressed" from="Buttons/Verlassen" to="." method="_on_verlassen_pressed"]

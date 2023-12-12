@@ -1,0 +1,193 @@
+[gd_scene load_steps=27 format=3 uid="uid://bc4ew0hs21qgc"]
+
+[ext_resource type="Script" path="res://Monsters/spiked_slime.gd" id="1_04lgv"]
+[ext_resource type="Texture2D" uid="uid://cm6kstegpatjl" path="res://Monsters/Animation/4 Spiked_slime/Spiked_slime_attack.png" id="2_ia6wa"]
+[ext_resource type="Texture2D" uid="uid://bmceb0on1k863" path="res://Monsters/Animation/4 Spiked_slime/Spiked_slime_death.png" id="3_kvgey"]
+[ext_resource type="Texture2D" uid="uid://dur3pubcfqluu" path="res://Monsters/Animation/4 Spiked_slime/Spiked_slime_idle.png" id="4_x1bus"]
+[ext_resource type="Texture2D" uid="uid://1ctvewxrcmaq" path="res://Monsters/Animation/4 Spiked_slime/Spiked_slime_walk.png" id="5_x1k7r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8si2l"]
+atlas = ExtResource("2_ia6wa")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kakm6"]
+atlas = ExtResource("2_ia6wa")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30ig6"]
+atlas = ExtResource("2_ia6wa")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1mok"]
+atlas = ExtResource("2_ia6wa")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18qfa"]
+atlas = ExtResource("3_kvgey")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7q353"]
+atlas = ExtResource("3_kvgey")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuvjj"]
+atlas = ExtResource("3_kvgey")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61naa"]
+atlas = ExtResource("3_kvgey")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qdp6"]
+atlas = ExtResource("4_x1bus")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wixnq"]
+atlas = ExtResource("4_x1bus")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhsi6"]
+atlas = ExtResource("4_x1bus")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0j4cn"]
+atlas = ExtResource("4_x1bus")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvn2n"]
+atlas = ExtResource("5_x1k7r")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtg61"]
+atlas = ExtResource("5_x1k7r")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pck2b"]
+atlas = ExtResource("5_x1k7r")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_436bq"]
+atlas = ExtResource("5_x1k7r")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b8x7k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8si2l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kakm6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_30ig6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q1mok")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18qfa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7q353")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kuvjj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_61naa")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qdp6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wixnq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fhsi6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0j4cn")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvn2n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rtg61")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pck2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_436bq")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xwa2"]
+size = Vector2(19, 10)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fn63e"]
+radius = 85.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rbgb2"]
+radius = 10.0499
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7flp0"]
+radius = 11.0
+
+[node name="Spiked Slime" type="CharacterBody2D"]
+script = ExtResource("1_04lgv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2.38419e-07, -13.5)
+scale = Vector2(0.65625, 0.604167)
+sprite_frames = SubResource("SpriteFrames_b8x7k")
+animation = &"Idle"
+frame_progress = 0.72447
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, -5)
+shape = SubResource("RectangleShape2D_4xwa2")
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+shape = SubResource("CircleShape2D_fn63e")
+
+[node name="PlayerCollision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCollision"]
+position = Vector2(2, -5)
+shape = SubResource("CircleShape2D_rbgb2")
+
+[node name="Spiked Slime attack" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Spiked Slime attack"]
+position = Vector2(2, -5)
+shape = SubResource("CircleShape2D_7flp0")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+
+[connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
+[connection signal="body_entered" from="PlayerCollision" to="." method="_on_player_collision_body_entered"]
+[connection signal="body_entered" from="Spiked Slime attack" to="." method="_on_spiked_slime_attack_body_entered"]
+[connection signal="body_exited" from="Spiked Slime attack" to="." method="_on_spiked_slime_attack_body_exited"]

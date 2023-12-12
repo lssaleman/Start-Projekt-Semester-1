@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0lw4csqv0ewi"]
+
+[ext_resource type="Script" path="res://PowerUp/Slowdown.gd" id="1_3c12g"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mc18u"]
+radius = 35.461
+height = 118.0
+
+[node name="SlowdownPowerUp" type="Area2D" groups=["Slow"]]
+script = ExtResource("1_3c12g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 2.34747
+scale = Vector2(-0.021, -0.021)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 11)
+scale = Vector2(0.705, 0.705)
+shape = SubResource("CapsuleShape2D_mc18u")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

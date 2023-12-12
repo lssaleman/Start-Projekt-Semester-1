@@ -1,0 +1,108 @@
+[gd_scene load_steps=4 format=3 uid="uid://j3b7vjg8a6dd"]
+
+[ext_resource type="Script" path="res://Menus/level_selection.gd" id="1_s7d8n"]
+[ext_resource type="PackedScene" uid="uid://dggws16tbd7nd" path="res://BG v2/background_v2.tscn" id="2_6snya"]
+[ext_resource type="AudioStream" uid="uid://nml2mhmfgivl" path="res://Music/interface-124464.mp3" id="2_yp0su"]
+
+[node name="levelSelection" type="Node2D"]
+script = ExtResource("1_s7d8n")
+
+[node name="Buttons" type="Node" parent="."]
+
+[node name="Menu" type="Button" parent="Buttons"]
+anchors_preset = -1
+anchor_left = 0.335
+anchor_top = 0.13
+anchor_right = 0.682
+anchor_bottom = 0.181
+offset_left = 0.0799866
+offset_top = -32.24
+offset_right = 0.335938
+offset_bottom = -0.28801
+size_flags_horizontal = 6
+size_flags_vertical = 6
+text = "Menu"
+metadata/_edit_use_anchors_ = true
+
+[node name="Clicksound" type="AudioStreamPlayer" parent="Buttons/Menu"]
+stream = ExtResource("2_yp0su")
+
+[node name="Level_1" type="Button" parent="Buttons"]
+anchors_preset = -1
+anchor_left = 0.335
+anchor_top = 0.235
+anchor_right = 0.682
+anchor_bottom = 0.285
+offset_left = 0.0799866
+offset_top = -0.280014
+offset_right = 0.335938
+offset_bottom = 32.32
+tooltip_text = "Start"
+text = "Level 1"
+
+[node name="Clicksound" type="AudioStreamPlayer" parent="Buttons/Level_1"]
+stream = ExtResource("2_yp0su")
+
+[node name="Level_2" type="Button" parent="Buttons"]
+anchors_preset = -1
+anchor_left = 0.335
+anchor_top = 0.335
+anchor_right = 0.682
+anchor_bottom = 0.389
+offset_left = 0.0799866
+offset_top = 34.92
+offset_right = 0.335938
+offset_bottom = 64.928
+tooltip_text = "Start"
+text = "Level 2"
+
+[node name="Clicksound" type="AudioStreamPlayer" parent="Buttons/Level_2"]
+stream = ExtResource("2_yp0su")
+
+[node name="Level_3" type="Button" parent="Buttons"]
+anchors_preset = -1
+anchor_left = 0.335
+anchor_top = 0.44
+anchor_right = 0.682
+anchor_bottom = 0.485
+offset_left = 0.0799866
+offset_top = 66.88
+offset_right = 0.335938
+offset_bottom = 102.72
+tooltip_text = "Start"
+text = "Level 3
+"
+
+[node name="Clicksound" type="AudioStreamPlayer" parent="Buttons/Level_3"]
+stream = ExtResource("2_yp0su")
+
+[node name="Level_4" type="Button" parent="Buttons"]
+anchors_preset = -1
+anchor_left = 0.335
+anchor_top = 0.547
+anchor_right = 0.682
+anchor_bottom = 0.591
+offset_left = 0.0799866
+offset_top = 97.544
+offset_right = 0.335938
+offset_bottom = 134.032
+tooltip_text = "Start"
+text = "Level 4"
+
+[node name="Clicksound" type="AudioStreamPlayer" parent="Buttons/Level_4"]
+stream = ExtResource("2_yp0su")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_6snya")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="mouse_entered" from="Buttons/Menu" to="." method="_on_menu_mouse_entered"]
+[connection signal="pressed" from="Buttons/Menu" to="." method="_on_menu_pressed"]
+[connection signal="mouse_entered" from="Buttons/Level_1" to="." method="_on_level_1_mouse_entered"]
+[connection signal="pressed" from="Buttons/Level_1" to="." method="_on_level_1_pressed"]
+[connection signal="mouse_entered" from="Buttons/Level_2" to="." method="_on_level_2_mouse_entered"]
+[connection signal="pressed" from="Buttons/Level_2" to="." method="_on_level_2_pressed"]
+[connection signal="mouse_entered" from="Buttons/Level_3" to="." method="_on_level_3_mouse_entered"]
+[connection signal="pressed" from="Buttons/Level_3" to="." method="_on_level_3_pressed"]
+[connection signal="mouse_entered" from="Buttons/Level_4" to="." method="_on_level_4_mouse_entered"]
+[connection signal="pressed" from="Buttons/Level_4" to="." method="_on_level_4_pressed"]

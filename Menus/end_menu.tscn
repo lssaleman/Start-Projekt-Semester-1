@@ -1,0 +1,104 @@
+[gd_scene load_steps=7 format=3 uid="uid://c1wxj3hws1ba"]
+
+[ext_resource type="Script" path="res://Menus/end_menu.gd" id="1_65bos"]
+[ext_resource type="PackedScene" uid="uid://b2ly111u3m1as" path="res://BG.tscn" id="2_xfppq"]
+[ext_resource type="Script" path="res://Menus/AmountOfIce.gd" id="3_phlul"]
+
+[sub_resource type="SystemFont" id="SystemFont_8js2o"]
+
+[sub_resource type="SystemFont" id="SystemFont_d4lly"]
+
+[sub_resource type="SystemFont" id="SystemFont_exjke"]
+
+[node name="end_menu" type="Control"]
+layout_mode = 3
+anchor_right = 0.035
+anchor_bottom = 0.062
+offset_right = -0.32
+offset_bottom = -0.176003
+script = ExtResource("1_65bos")
+
+[node name="Victory1" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.625
+anchor_top = 1.175
+anchor_right = 25.3
+anchor_bottom = 4.675
+offset_right = -6.10352e-05
+offset_bottom = 1.52588e-05
+theme_override_colors/font_color = Color(0.596078, 0.0313726, 0.180392, 1)
+theme_override_fonts/font = SubResource("SystemFont_8js2o")
+theme_override_font_sizes/font_size = 100
+text = "YOU "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="victory2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 4.4
+anchor_top = 3.225
+anchor_right = 28.075
+anchor_bottom = 6.725
+theme_override_colors/font_color = Color(0, 0, 0.815686, 1)
+theme_override_fonts/font = SubResource("SystemFont_d4lly")
+theme_override_font_sizes/font_size = 100
+text = "WON!"
+horizontal_alignment = 1
+
+[node name="AmountOfGifts" type="Label" parent="."]
+layout_mode = 2
+anchor_left = 1.31
+anchor_top = 4.561
+anchor_right = 24.748
+anchor_bottom = 7.75
+offset_left = 22.6
+offset_top = 72.56
+offset_right = 32.08
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(0.341176, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_exjke")
+theme_override_font_sizes/font_size = 80
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("3_phlul")
+
+[node name="MainMenu" type="Button" parent="."]
+layout_mode = 2
+anchor_left = 2.65
+anchor_top = 13.375
+anchor_right = 12.35
+anchor_bottom = 15.3
+theme_override_font_sizes/font_size = 50
+text = "Main Menu"
+
+[node name="LevelSelection" type="Button" parent="."]
+layout_mode = 2
+anchor_left = 6.775
+anchor_top = 9.275
+anchor_right = 16.95
+anchor_bottom = 11.2
+theme_override_font_sizes/font_size = 50
+text = "Level Selection
+"
+
+[node name="Restart" type="Button" parent="."]
+layout_mode = 2
+anchor_left = 14.775
+anchor_top = 11.95
+anchor_right = 25.55
+anchor_bottom = 13.875
+offset_right = -6.10352e-05
+theme_override_font_sizes/font_size = 50
+text = "Restart
+"
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="BG" parent="Node2D" instance=ExtResource("2_xfppq")]
+
+[connection signal="pressed" from="MainMenu" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="LevelSelection" to="." method="_on_level_selection_pressed"]
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cl2mrhrcj20xc"]
+
+[node name="pause_menu_level_1" type="MarginContainer"]
+offset_left = -59.0
+offset_top = -96.0
+offset_right = 65.0
+offset_bottom = 5.0
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Resume" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "RESUME"
+
+[node name="Restart" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "RESTART"
+
+[node name="QuitMenu" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "QUIT TO MENU"
+
+[node name="QuitGame" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "QUIT GAME
+"

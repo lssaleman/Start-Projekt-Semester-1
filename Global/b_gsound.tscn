@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcvinywcoqati"]
+
+[ext_resource type="AudioStream" uid="uid://cbm6jmimyq1xv" path="res://Music/Jingle-Bells-3(chosic.com).mp3" id="1_pcmbm"]
+
+[node name="BGsound" type="AudioStreamPlayer"]
+stream = ExtResource("1_pcmbm")
+autoplay = true
